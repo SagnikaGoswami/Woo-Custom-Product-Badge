@@ -58,8 +58,6 @@
       )
    );
 
-   $selected_badge_from_shortcode = get_query_var('custom_badge_products');
-
    if ($selected_badge != "none") {
     $product_badge_final = '';
     if ($selected_badge == "best seller") {
@@ -71,20 +69,6 @@
     }
     echo "<div>{$product_badge_final}</div>";
   }
-
-  
 }
 
-// Addiing the Shortcode
-
-add_shortcode('custom_badge_products', "wcpb_custom_badge_products");
-
-function wcpb_custom_badge_products($attributes){
-   $attributes = shortcode_atts(array(
-      "badge" => "none"   
-   ), $attributes, "custom_badge_products");
-
-   return $attributes['badge'];
-}
 ?>
-
