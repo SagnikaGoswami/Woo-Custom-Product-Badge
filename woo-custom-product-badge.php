@@ -67,7 +67,7 @@
     } else if ($selected_badge == "new arrival") {
       $product_badge_final = "New Arrival";
     }
-    echo "<div>{$product_badge_final}</div>";
+    return "<div style="background-color: blue; padding: .5rem 1rem; border-radius: 3%;">{$product_badge_final}</div>";
   }
 }
 
