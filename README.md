@@ -1,27 +1,46 @@
-# Woo-Custom-Product-Badge
-A simple WooCommerce plugin to add and display custom product badges on single product pages.
+# WooCommerce Custom Product Badge
+
+A custom WordPress plugin developed using **PHP and WooCommerce** to assign and display promotional badges on individual product pages.
 
 ## Features
-+ Adds a meta box on the Product Edit Page to select a badge:
-  + None (default)
-  + Best Seller
-  + Hot Deal
-  + New Arrival
-+ Displays the selected badge above the product title on the single product page.
-## Installation
-+ Download or copy the plugin folder to plugins.
-+ Activate the plugin from the WordPress admin dashboard (Plugins > Installed Plugins).
-## Usage
-+ Edit any WooCommerce product.
-+ In the right sidebar of your single product page, find the Woo Custom Product Badge meta box.
-+ Select a badge from the dropdown.
-+ The selected badge will appear above the product title.
-## Customization
-+ To style the badge, you can add custom CSS in your theme or modify the plugin’s output.
-## Requirements
-+ WordPress 6.8.1 or higher
-+ WooCommerce
-+ PHP 8.2 or higher
-## Author
-Sagnika Goswami
 
+- Adds a custom badge selection field to the WooCommerce product editor.
+- Supports predefined badges:
+  - Best Seller
+  - Hot Deal
+  - New Arrival
+  - None
+- Stores the selected badge using WordPress product metadata.
+- Displays the assigned badge above the product title on single-product pages.
+
+## Technologies Used
+
+- PHP
+- WordPress
+- WooCommerce
+- WordPress Hooks and Metadata API
+
+## Installation
+
+1. Download or clone this repository.
+2. Place the plugin folder inside `wp-content/plugins/` in your WordPress installation.
+3. Ensure WooCommerce is installed and activated.
+4. Navigate to **WordPress Dashboard → Plugins** and activate the custom product badge plugin.
+
+## Usage
+
+1. Navigate to **Products → All Products** in the WordPress dashboard.
+2. Open a product for editing.
+3. Select a badge from the custom badge dropdown.
+4. Update the product to save your selection.
+5. Visit the product's individual page to view the assigned badge.
+
+## Project Status
+
+This project is a custom WooCommerce plugin developed to explore WordPress plugin development, product metadata, and WooCommerce customization.
+
+The implementation is undergoing improvements to its badge rendering, input validation, and compatibility.
+
+## Disclaimer
+
+This is an independent educational project and is not affiliated with or endorsed by WooCommerce or Automattic.
