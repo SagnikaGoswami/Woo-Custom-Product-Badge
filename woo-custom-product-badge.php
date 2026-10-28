@@ -14,7 +14,7 @@
  }
 
  // Register the PLugin Badge Meta Box
- add_action('add_meta_boxes', "wcpb_register_product_badge_meta_box");
+ add_action('add_meta_boxes', 'wcpb_register_meta_box');
 
  function wcpb_register_meta_box(){
     add_meta_box("wcpb_custom_product_badge", "Woo Custom Product Badge", "wcpb_create_product_badge_meta_box", "product", "side");
@@ -22,7 +22,11 @@
 
  // Create the Product Badge Dropdown/ Create the Meta Box for Product Badge
  function wcpb_create_product_badge_meta_box($post){
-   $selected_badge = get_post_meta($post->ID, "wcpb_selected_badge", true);
+   $selected_badge = get_post_meta(
+    get_the_ID(),
+    'wcpb_selected_badge',
+    true
+);
    ?>
    <label for="product-badge-dropdown">Select your Product Badge</label>
    <select name="product-badge-dropdown" id="product-badge-dropdown">
@@ -67,7 +71,9 @@
     } else if ($selected_badge == "new arrival") {
       $product_badge_final = "New Arrival";
     }
-    return "<div style="background-color: blue; padding: .5rem 1rem; border-radius: 3%;">{$product_badge_final}</div>";
+    echo '<div class="wcpb-product-badge">' .
+    esc_html($product_badge_final) .
+    '</div>';
   }
 }
 
